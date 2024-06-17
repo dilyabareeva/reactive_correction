@@ -1,2 +1,9 @@
-# reactive_correction
-The implementation of the paper "Reactive Model Correction: Mitigating Harm to Task-Relevant Features via Conditional Bias Suppression".
+# COMING SOON: Reactive Model Correction: Mitigating Harm to Task-Relevant Features via Conditional Bias Suppression
+
+<p align="center">
+  <img width="500" alt="Frame" src="https://github.com/dilyabareeva/reactive_correction/assets/44092813/5f99d4af-8d9d-404a-a5d3-54c899f734a3">
+</p>
+
+<a href="https://arxiv.org/abs/2404.09601"><img src="https://img.shields.io/badge/arXiv-2404.09601-b31b1b.svg" height=20.5></a>
+
+> Deep Neural Networks are prone to learning and relying on spurious correlations in the training data, which, for high-risk applications, can have fatal consequences. Various approaches to suppress model reliance on harmful features have been proposed that can be applied post-hoc without additional training. Whereas those methods can be applied with efficiency, they also tend to harm model performance by globally shifting the distribution of latent features. To mitigate unintended overcorrection of model behavior, we propose a reactive approach conditioned on model-derived knowledge and eXplainable Artificial Intelligence (XAI) insights. While the reactive approach can be applied to many post-hoc methods, we demonstrate the incorporation of reactivity in particular for P-ClArC (Projective Class Artifact Compensation), introducing a new method called R-ClArC (Reactive Class Artifact Compensation). Through rigorous experiments in controlled settings (FunnyBirds) and with a real-world dataset (ISIC2019), we show that introducing reactivity can minimize the detrimental effect of the applied correction while simultaneously ensuring low reliance on spurious features. 
