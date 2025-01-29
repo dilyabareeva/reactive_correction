@@ -1,0 +1,43 @@
+_target_: src.data.isic.ISICDataset
+
+augmentation:
+  _target_: src.data.utils.transforms.standard_augmentation
+transform:
+  _target_: src.data.utils.transforms.standard_transform
+  img_size: 224
+
+local_artifact_path: assets/localized_artifacts/isic/
+pretrained: false
+image_size: 224
+artifacts:
+  - "reflection"
+  - "skin_marker"
+  - "band_aid"
+artifacts_per_class:
+  1: ["skin_marker", "band_aid"]
+  4: ["skin_marker", "reflection"]
+
+artifact_paths:
+  reflection:
+    positive_path: data/checkpoints/cav_gt_sets/isic/reflection/positive/
+    negative_path: data/checkpoints/cav_gt_sets/isic/reflection/negative/
+  band_aid:
+    positive_path: data/checkpoints/cav_gt_sets/isic/band_aid/positive/
+    negative_path: data/checkpoints/cav_gt_sets/isic/band_aid/negative/
+  skin_marker:
+    positive_path: data/checkpoints/cav_gt_sets/isic/skin_marker/positive/
+    negative_path: data/checkpoints/cav_gt_sets/isic/skin_marker/negative/
+
+artifact_ids_file: assets/artifacts_isic.json
+
+data_paths:
+  - /data1/datapool/dataset_isic2019/
+dataset_name: isic
+n_classes: 9
+cav_pairs: ground_truth
+neg_mean: cav_negative
+
+
+
+
+

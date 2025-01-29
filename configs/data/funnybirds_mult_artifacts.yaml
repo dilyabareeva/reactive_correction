@@ -1,0 +1,53 @@
+_target_: src.data.funnybirds_mult_artifacts.FunnyBirdsArtifacts
+
+augmentation:
+  _target_: src.data.utils.transforms.standard_augmentation
+transform:
+  _target_: src.data.utils.transforms.standard_transform
+
+pretrained: false
+root_dir:
+  - data/funnybirds/mult_cav/FunnyBirds
+image_size: 256
+local_artifact_path: assets/localized_artifacts/funnybirds_mult_artifacts/
+dataset_name: funnybirds_mult_artifacts
+n_classes: 10
+artifacts_per_class:
+  0: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+artifacts: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+artifact_paths:
+  0:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/0/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+  1:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/1/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+  2:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/2/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+  3:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/3/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+  4:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/4/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+  5:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/5/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+  6:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/6/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+  7:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/7/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+  8:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/8/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+  9:
+    positive_path: data/funnybirds/mult_cav/FunnyBirds/cav/9/
+    negative_path: data/funnybirds/mult_cav/FunnyBirds/cav/negative/
+
+artifact_ids_file: data/funnybirds/mult_cav/FunnyBirds/artifacts_id_file.json
+cav_pairs: ground_truth
+neg_mean: cav_negative

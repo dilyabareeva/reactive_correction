@@ -1,0 +1,29 @@
+_target_: src.data.funnybirds_backdoor.FunnyBirds
+
+augmentation:
+  _target_: src.data.utils.transforms.standard_augmentation
+transform:
+  _target_: src.data.utils.transforms.standard_transform
+
+pretrained: false
+image_size: 256
+artifacts:
+  - 0
+artifacts_per_class:
+  0: [0]
+
+local_artifact_path: assets/localized_artifacts/funnybirds_backdoor/
+
+artifact_paths:
+  0:
+    positive_path: data/funnybirds/backdoor/FunnyBirds/cav/0/
+    negative_path: data/funnybirds/backdoor/FunnyBirds/cav/negative/
+
+artifact_ids_file: data/funnybirds/backdoor/FunnyBirds/artifacts_id_file.json
+
+root_dir:
+  - data/funnybirds/backdoor/FunnyBirds
+dataset_name: funnybirds_backdoor
+n_classes: 2
+cav_pairs: ground_truth
+neg_mean: cav_negative

@@ -1,0 +1,2 @@
+model_name: resnet18
+layer_name: last_conv

@@ -1,0 +1,3 @@
+  _partial_: true
+  _target_: src.concept.cav_classifiers.SignalClassifier
+  method: pattern
